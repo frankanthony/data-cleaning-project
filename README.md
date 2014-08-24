@@ -27,3 +27,4 @@ Analysis Process:
 11. Line 53-58: is a function (tidy_column) that removes the parenthesis from the observation column names  
 12. Line 61: uses the tidy_column function to tidy the column names
 13. Lines 66-69: crates a tidy data frame with all the matched observation data averages, grouped by subject and activity
+14. Line 71: writes tidy_data_set to tidy_data_set.txt in working directory

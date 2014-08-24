@@ -54,7 +54,7 @@ tidy_column <- function(x) {
   
   #remove ()
   return(gsub("[(\\(\\)) ]", "", x)) 
-
+  
 }
 
 #clean column names
@@ -64,7 +64,8 @@ colnames(all_data) <- tidy_column(colnames(all_data))
 #each combination of variable, subject, and activity.
 
 tidy_data_set <-aggregate(
-                  all_data[,c(-1,-2)], 
-                  by=list( subject=all_data$subject, activity=all_data$activity ),
-                  FUN=mean)
+  all_data[,c(-1,-2)], 
+  by=list( subject=all_data$subject, activity=all_data$activity ),
+  FUN=mean)
 
+write.table(tidy_data_set, file="tidy_data_set.txt" row.name=FALSE)
