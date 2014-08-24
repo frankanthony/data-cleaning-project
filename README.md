@@ -21,9 +21,9 @@ Analysis Process:
 5. Line 35: the test and training data observations are combined into a single data frame (all_observations)
 6. Line 38: the data in features.txt is used to name the observation data columns in all_observations
 7. Line 41: a regular expression is used to find the observation labels in features.txt that contain mean() or std()
-8. Line 42: a vector is created containing the IDs of the found columns
-9. Line 43: a data frame is created using the vector of column IDs 
-10. Line 46: a data frame is created with subject id, activity and observation data columns 
+8. Line 42: a vector is created containing the IDs of the matched columns
+9. Line 43: a data frame is created using the vector of matched column IDs 
+10. Line 46: a data frame is created with subject id, activity and matched observation data columns 
 11. Line 53-58: is a function (tidy_column) that removes the parenthesis from the observation column names  
 12. Line 61: uses the tidy_column function to tidy the column names
-13. Lines 66-69: crates a tidy data frame with all the observation data averages grouped by subject and activity
+13. Lines 66-69: crates a tidy data frame with all the matched observation data averages, grouped by subject and activity
