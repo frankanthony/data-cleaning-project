@@ -68,4 +68,4 @@ tidy_data_set <-aggregate(
   by=list( subject=all_data$subject, activity=all_data$activity ),
   FUN=mean)
 
-write.table(tidy_data_set, file="tidy_data_set.txt" row.name=FALSE)
+write.table(tidy_data_set, file="tidy_data_set.txt", row.name=FALSE)
